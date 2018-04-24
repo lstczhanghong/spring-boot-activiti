@@ -1,10 +1,10 @@
 spring:
   datasource:
-    url: jdbc:sqlserver://db.leadingsoft.com.cn:1433;databaseName=activititest
-    username: sa
-    password: admin123456!@#
-    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    url: '@datasource.url@'
+    username: '@datasource.username@'
+    password: '@datasource.password@'
+    driver-class-name: '@datasource.driver@'
   jpa:
-    database-platform: org.hibernate.dialect.SQLServer2012Dialect
+    database-platform: '@datasource.platform@'
     show-sql: true
     generate-ddl: true

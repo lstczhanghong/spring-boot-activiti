@@ -7,10 +7,10 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import java.util.Arrays;
 import java.util.List;
 
-//@ConfigurationProperties("spring.activiti")
-//@Getter
-//@Setter
+@ConfigurationProperties("spring.activiti")
+@Getter
+@Setter
 public class ActivitiProperties {
-    private String processDefinitionLocationPrefix = "classpath:/processes/";
+    private String processDefinitionLocationPrefix = "classpath:/process/";
     private List<String> processDefinitionLocationSuffixes = Arrays.asList("**.bpmn20.xml", "**.bpmn");
 }
