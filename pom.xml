@@ -103,10 +103,10 @@
             </activation>
             <properties>
                 <showsql>true</showsql>
-                <datasource.url>jdbc:mysql://192.168.0.10:3306/activiti?createDatabaseIfNotExist=true&amp;useUnicode=true&amp;characterEncoding=utf-8&amp;autoReconnect=true</datasource.url>
+                <datasource.url>jdbc:mysql://127.0.0.1:3306/activiti?createDatabaseIfNotExist=true&amp;useUnicode=true&amp;characterEncoding=utf-8&amp;autoReconnect=true</datasource.url>
                 <datasource.driver>com.mysql.jdbc.Driver</datasource.driver>
                 <datasource.username>root</datasource.username>
-                <datasource.password>admin123456!@#</datasource.password>
+                <datasource.password>111111</datasource.password>
                 <datasource.platform>org.hibernate.dialect.MySQL57Dialect</datasource.platform>
                 <server.port>8080</server.port>
             </properties>

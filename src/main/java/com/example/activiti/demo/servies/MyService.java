@@ -34,11 +34,13 @@ public class MyService {
 
     public String startProcess(String assignee) {
         Person person = personRepository.findByName(assignee);
+        Person person2 = personRepository.findByName("David");
 
         Map<String, Object> variables = new HashMap<String, Object>();
         variables.put("person", person);
-
-        runtimeService.startProcessInstanceByKey("testProcess", variables);
+        variables.put("timePerson", person2);
+        variables.put("duration", "PT20S");
+        runtimeService.startProcessInstanceByKey("testProcess2", variables);
 
         return processInfo();
     }

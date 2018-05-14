@@ -36,7 +36,7 @@ public class ActivitiConfig {
         StandaloneProcessEngineConfiguration configuration = new StandaloneProcessEngineConfiguration();
         configuration.setDataSource(dataSource);
         configuration.setDatabaseSchemaUpdate(ProcessEngineConfiguration.DB_SCHEMA_UPDATE_TRUE);
-        configuration.setAsyncExecutorActivate(false);
+        configuration.setAsyncExecutorActivate(true);
         return configuration;
     }
 
