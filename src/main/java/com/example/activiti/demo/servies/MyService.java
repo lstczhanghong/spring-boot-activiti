@@ -39,7 +39,7 @@ public class MyService {
         Map<String, Object> variables = new HashMap<String, Object>();
         variables.put("person", person);
         variables.put("timePerson", person2);
-        variables.put("duration", "PT20S");
+        variables.put("duration", "PT5");
         runtimeService.startProcessInstanceByKey("testProcess2", variables);
 
         return processInfo();
