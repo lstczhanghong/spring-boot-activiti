@@ -31,6 +31,8 @@ public class MyService {
 
     @Autowired
     private PersonRepository personRepository;
+    @Autowired
+    private MyListener myListener;
 
     public String startProcess(String assignee) {
         Person person = personRepository.findByName(assignee);
@@ -39,7 +41,8 @@ public class MyService {
         Map<String, Object> variables = new HashMap<String, Object>();
         variables.put("person", person);
         variables.put("timePerson", person2);
-        variables.put("duration", "PT5");
+        variables.put("duration", "PT1M");
+        variables.put("listenerName", myListener);
         runtimeService.startProcessInstanceByKey("testProcess2", variables);
 
         return processInfo();

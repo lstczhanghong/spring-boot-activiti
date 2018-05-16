@@ -80,7 +80,7 @@
 
     <profiles>
         <!-- 服务器连接数据库 -->
-        <profile>
+<!--        <profile>
             <id>sqlserver</id>
             <activation>
                 <activeByDefault>true</activeByDefault>
@@ -94,12 +94,12 @@
                 <datasource.platform>org.hibernate.dialect.SQLServer2012Dialect</datasource.platform>
                 <server.port>8080</server.port>
             </properties>
-        </profile>
+        </profile>-->
 
         <profile>
             <id>mysql</id>
             <activation>
-                <activeByDefault>false</activeByDefault>
+                <activeByDefault>true</activeByDefault>
             </activation>
             <properties>
                 <showsql>true</showsql>
