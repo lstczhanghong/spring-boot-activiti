@@ -12,6 +12,7 @@ import java.util.List;
 
 
 @RestController
+@RequestMapping("act")
 public class MyController {
 
     @Autowired

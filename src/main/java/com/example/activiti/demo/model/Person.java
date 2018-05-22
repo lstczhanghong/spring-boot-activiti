@@ -2,9 +2,7 @@ package com.example.activiti.demo.model;
 
 import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
 
@@ -21,6 +19,9 @@ public class Person implements Serializable {
     private String name;
 
     private Date birthDate;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    private Wife wife;
 
     public Person(String name, Date birthDate) {
         this.name = name;
