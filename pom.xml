@@ -37,6 +37,10 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
 
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -52,7 +56,7 @@
         <dependency>
             <groupId>org.activiti</groupId>
             <artifactId>activiti-engine</artifactId>
-            <version>6.0.0</version>
+            <version>7-201802-EA</version>
         </dependency>
         <dependency>
             <groupId>mysql</groupId>
@@ -80,21 +84,21 @@
 
     <profiles>
         <!-- 服务器连接数据库 -->
-<!--        <profile>
+        <profile>
             <id>sqlserver</id>
             <activation>
                 <activeByDefault>true</activeByDefault>
             </activation>
             <properties>
-                <showsql>false</showsql>
-                <datasource.url>jdbc:sqlserver://db.leadingsoft.com.cn;databaseName=activititest</datasource.url>
+                <showsql>true</showsql>
+                <datasource.url>jdbc:sqlserver://127.0.0.1;databaseName=activiti</datasource.url>
                 <datasource.driver>com.microsoft.sqlserver.jdbc.SQLServerDriver</datasource.driver>
                 <datasource.username>sa</datasource.username>
-                <datasource.password>admin123456!@#</datasource.password>
+                <datasource.password>sa</datasource.password>
                 <datasource.platform>org.hibernate.dialect.SQLServer2012Dialect</datasource.platform>
                 <server.port>8080</server.port>
             </properties>
-        </profile>-->
+        </profile>
 
         <profile>
             <id>mysql</id>
@@ -106,7 +110,7 @@
                 <datasource.url>jdbc:mysql://127.0.0.1:3306/activiti?createDatabaseIfNotExist=true&amp;useUnicode=true&amp;characterEncoding=utf-8&amp;autoReconnect=true</datasource.url>
                 <datasource.driver>com.mysql.jdbc.Driver</datasource.driver>
                 <datasource.username>root</datasource.username>
-                <datasource.password>123456</datasource.password>
+                <datasource.password>111111</datasource.password>
                 <datasource.platform>org.hibernate.dialect.MySQL57Dialect</datasource.platform>
                 <server.port>8080</server.port>
             </properties>
